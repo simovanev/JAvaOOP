@@ -1,3 +1,5 @@
+package Abstractions.StudentSystem;
+
 public class Student {
     private String name;
     private int age;
@@ -13,22 +15,14 @@ public class Student {
         return this.name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getAge() {
         return this.age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public double getGrade() {
         return this.grade;
     }
-
     public void setGrade(double grade) {
         this.grade = grade;
     }
