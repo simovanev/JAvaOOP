@@ -1,4 +1,4 @@
-package _03_ValidationData;
+package Encapsulation._04_FirstAndReserveTeam;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,11 +20,14 @@ public class Main {
                 System.out.println(e.getMessage());
             }
         }
-        double bonus = Double.parseDouble(reader.readLine());
-        for (Person person : people) {
-            person.increaseSalary(bonus);
-            System.out.println(person);
-        }
+
+
+    Team team = new Team("Black eagle");
+    for (Person person: people){
+        team.addPlayer(person);
+    }
+        System.out.printf("First team have %d players\n",team.getFirstTeam().size());
+        System.out.printf("Reserve team have %d players\n",team.getReserveTeam().size());
     }
 
 }

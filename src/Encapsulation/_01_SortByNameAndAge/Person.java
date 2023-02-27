@@ -1,4 +1,4 @@
-package _01_SortByNameAndAge;
+package Encapsulation._01_SortByNameAndAge;
 
  class Person {
     private String firstName;

@@ -1,8 +1,8 @@
-package _03_ValidationData;
+package Encapsulation._03_ValidationData;
 
 import java.text.DecimalFormat;
 
-class Person {
+public class Person {
     private String firstName;
     private String lastName;
     private int age;
@@ -24,7 +24,11 @@ class Person {
         return age;
     }
 
-    public void setFirstName(String firstName) {
+    double getSalary() {
+        return salary;
+    }
+
+   public void setFirstName(String firstName) {
         if (firstName.length() < 3) {
             throw new IllegalArgumentException("First name cannot be less than 3 symbols");
         } else this.firstName = firstName;
@@ -42,7 +46,7 @@ class Person {
         } else this.age = age;
     }
 
-    public void setSalary(double salary) {
+     void setSalary(double salary) {
         if (salary < 460) {
             throw new IllegalArgumentException("Salary cannot be less than 460 leva");
         } else this.salary = salary;
@@ -54,9 +58,9 @@ class Person {
         return String.format("%s %s gets %s leva", firstName, lastName, dgd.format(salary));
     }
 
-    void increaseSalary(double bonus) {
+    public  void increaseSalary(double bonus) {
         if (age < 30) {
-            salary += salary * bonus / 200;
-        } else salary += salary * bonus / 100;
+            setSalary(salary += salary * bonus / 200);
+        } else setSalary(salary += salary * bonus / 100);
     }
 }

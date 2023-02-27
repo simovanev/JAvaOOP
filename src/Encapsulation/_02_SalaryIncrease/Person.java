@@ -1,4 +1,4 @@
-package _02_SalaryIncrease;
+package Encapsulation._02_SalaryIncrease;
 
 import java.text.DecimalFormat;
 
