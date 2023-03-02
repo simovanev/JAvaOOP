@@ -1,31 +1,41 @@
 package _03_ShoppingSpree;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
         String[] people= scanner.nextLine().split(";");
-        Map<String , Person> personMap= new HashMap<>();
+        Map<String , Person> personMap= new LinkedHashMap<>();
         for (String buyer: people){
             String[] buyerInfo= buyer.split("=");
             String buyerName= buyerInfo[0];
             double buyerMoney=Double.parseDouble(buyerInfo[1]);
-            Person person= new Person(buyerName,buyerMoney);
+            Person person;
+            try {
+                person= new Person(buyerName,buyerMoney);
+            }catch (IllegalArgumentException e){
+                System.out.println(e.getMessage());
+                return;
+            }
             personMap.putIfAbsent(buyerName,person);
 
         }
         String[] products= scanner.nextLine().split(";");
-        Map<String , Product> productMap= new HashMap<>();
+        Map<String , Product> productMap= new LinkedHashMap<>();
         for (String item: products){
             String[] buyerInfo= item.split("=");
             String itemName= buyerInfo[0];
             double itemCost=Double.parseDouble(buyerInfo[1]);
-            Product product= new Product(itemName,itemCost);
+            Product product;
+            try {
+
+            product= new Product(itemName,itemCost);
+            }catch (IllegalArgumentException e){
+                System.out.println(e.getMessage());
+                return;
+            }
             productMap.putIfAbsent(itemName,product);
 
         }
@@ -41,11 +51,14 @@ public class Main {
         }
         for (Map.Entry<String, Person> entry : personMap.entrySet()) {
             if (entry.getValue().getProducts().isEmpty()){
-                System.out.println(entry.getKey()+" – Nothing bought");
+                System.out.println(entry.getKey()+" - Nothing bought");
             }else {
 
+               List< String> element= entry.getValue()
+                       .getProducts().stream()
+                       .map(Product::getName)
+                       .collect(Collectors.toList());
 
-               List< String> element= entry.getValue().getProducts().stream().map(e->e.getName()).collect(Collectors.toList());
             System.out.println(entry.getKey()+" - "+ String.join(", " ,element));
 
             }
