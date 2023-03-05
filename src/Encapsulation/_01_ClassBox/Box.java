@@ -1,4 +1,4 @@
-package _01_ClassBox;
+package Encapsulation._01_ClassBox;
 
 public class Box {
     private double length;

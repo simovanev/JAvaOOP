@@ -1,4 +1,4 @@
-package _03_ShoppingSpree;
+package Encapsulation._03_ShoppingSpree;
 
 public class Validate {
     public static void validationName(String name) {

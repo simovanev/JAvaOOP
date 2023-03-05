@@ -1,4 +1,4 @@
-package _03_ShoppingSpree;
+package Encapsulation._03_ShoppingSpree;
 
 import java.util.*;
 import java.util.stream.Collectors;
