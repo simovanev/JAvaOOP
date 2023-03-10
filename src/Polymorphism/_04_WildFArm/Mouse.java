@@ -1,7 +1,7 @@
-package _04_WildFArm;
+package Polymorphism._04_WildFArm;
 
 public class Mouse extends  Mammal{
-    public Mouse(String animalName, String animalType, String animalWeight, String livingRegion) {
+    public Mouse(String animalType,String animalName,  String animalWeight, String livingRegion) {
         super(animalName, animalType, animalWeight, livingRegion);
     }
 
@@ -17,7 +17,7 @@ public class Mouse extends  Mammal{
     @Override
     public String toString() {
 
-        return String.format("%S[%s, %s, %s, %d]\n",
+        return String.format("%s[%s, %s, %s, %d]\n",
                 getClass().getSimpleName(),
                 getAnimalName(),
                 getAnimalWeight(),

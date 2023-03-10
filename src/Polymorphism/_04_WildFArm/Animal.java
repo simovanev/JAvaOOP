@@ -1,4 +1,4 @@
-package _04_WildFArm;
+package Polymorphism._04_WildFArm;
 
 public abstract class Animal {
     private String animalName;
@@ -6,7 +6,7 @@ public abstract class Animal {
     private String animalWeight;
     private Integer foodEaten = 0;
 
-    public Animal(String animalName, String animalType, String animalWeight) {
+    public Animal( String animalType,String animalName,  String animalWeight) {
         this.animalName = animalName;
         this.animalType = animalType;
         this.animalWeight = animalWeight;

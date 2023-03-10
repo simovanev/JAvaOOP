@@ -1,9 +1,9 @@
-package _04_WildFArm;
+package Polymorphism._04_WildFArm;
 
 public class Cat extends Felime{
     private  String breed;
 
-    public Cat(String animalName, String animalType, String animalWeight, String livingRegion, String breed) {
+    public Cat( String animalType,String animalName, String animalWeight, String livingRegion, String breed) {
         super(animalName, animalType, animalWeight, livingRegion);
         this.breed= breed;
     }
@@ -23,7 +23,7 @@ public class Cat extends Felime{
     @Override
     public String toString() {
 
-        return String.format("%S[%s, %s, %s, %s, %d]\n",
+        return String.format("%s[%s, %s, %s, %s, %d]\n",
                 getClass().getSimpleName(),
                 getAnimalName(),
                 breed,

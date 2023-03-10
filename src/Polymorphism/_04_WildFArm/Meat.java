@@ -1,7 +1,7 @@
-package _04_WildFArm;
+package Polymorphism._04_WildFArm;
 
-public class Vegetable extends Food{
-    public Vegetable(Integer quantity) {
+public class Meat extends Food{
+    public Meat(Integer quantity) {
         super(quantity);
     }
 

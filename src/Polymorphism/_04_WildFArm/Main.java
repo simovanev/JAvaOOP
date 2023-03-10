@@ -1,4 +1,4 @@
-package _04_WildFArm;
+package Polymorphism._04_WildFArm;
 
 import java.util.Scanner;
 
@@ -6,15 +6,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
          String info= scanner.nextLine();
-         while (!info.equals("end")){
-             String foodInfo= scanner.nextLine();
-             String[] whatFood= foodInfo.split(" ");
-             Food food;
-             if (whatFood[0].equals("Meat")){
-                  food = new Meat(Integer.parseInt(whatFood[1]));
-             }else {
-                  food = new Vegetable(Integer.parseInt(whatFood[1]));
-             }
+         while (!info.equals("End")){
+
              String[] information=info.split(" ");
              String animal= information[0];
              Animal creature=null;
@@ -31,6 +24,14 @@ public class Main {
                  case "Zebra":
                      creature= new Zebra(information[0],information[1],information[2],information[3]);
                      break;
+             }
+             String foodInfo= scanner.nextLine();
+             String[] whatFood= foodInfo.split(" ");
+             Food food;
+             if (whatFood[0].equals("Meat")){
+                 food = new Meat(Integer.parseInt(whatFood[1]));
+             }else {
+                 food = new Vegetable(Integer.parseInt(whatFood[1]));
              }
              assert creature != null;
              creature.makeSound("");

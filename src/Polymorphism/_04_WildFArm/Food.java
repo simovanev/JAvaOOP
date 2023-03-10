@@ -1,4 +1,4 @@
-package _04_WildFArm;
+package Polymorphism._04_WildFArm;
 
 public abstract class Food {
     private Integer quantity;

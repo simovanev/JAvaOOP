@@ -1,4 +1,4 @@
-package _04_WildFArm;
+package Polymorphism._04_WildFArm;
 
 public class Felime extends Mammal{
     public Felime(String animalName, String animalType, String animalWeight, String livingRegion) {

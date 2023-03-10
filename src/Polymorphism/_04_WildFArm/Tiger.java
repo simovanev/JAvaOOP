@@ -1,7 +1,7 @@
-package _04_WildFArm;
+package Polymorphism._04_WildFArm;
 
 public class Tiger extends Felime{
-    public Tiger(String animalName, String animalType, String animalWeight, String livingRegion) {
+    public Tiger(String animalType,String animalName,  String animalWeight, String livingRegion) {
         super(animalName, animalType, animalWeight, livingRegion);
     }
 
@@ -20,7 +20,7 @@ public class Tiger extends Felime{
     @Override
     public String toString() {
 
-        return String.format("%S[%s, %s, %s, %d]\n",
+        return String.format("%s[%s, %s, %s, %d]\n",
                 getClass().getSimpleName(),
                 getAnimalName(),
                 getAnimalWeight(),
