@@ -1,4 +1,4 @@
-package _01_Vehicles;
+package Polymorphism._01_Vehicles;
 
 public class Truck extends Vehicles{
     public Truck(double fuel, double consumption) {
