@@ -1,5 +1,7 @@
 package ReflectionAndAnnotations._01_Reflection;
 
+import ReflectionAndAnnotations._01_Reflection.Reflection;
+
 import java.lang.reflect.InvocationTargetException;
 
 public class Main {
