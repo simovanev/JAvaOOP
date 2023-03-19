@@ -1,3 +1,5 @@
+package ReflectionAndAnnotations._03_HighQualityMistakes;
+
 import java.io.Serializable;
 
 public class Reflection implements Serializable {
