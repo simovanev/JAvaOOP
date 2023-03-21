@@ -24,9 +24,10 @@ public class _03_EnterNumbers {
 
             }catch (IllegalArgumentException e){
                 System.out.println(e.getMessage());
+            input= scanner.nextLine();
             }
         }
-
+//todo printing
     }
 
     private static boolean numberInRange(int currentNumber,int start, int end) {
